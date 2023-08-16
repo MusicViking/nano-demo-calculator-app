@@ -19,7 +19,7 @@ def add():
     first = numbers['first']
     second = numbers['second']
     # return jsonify(response)
-    return str(int(first) + int(second))
+    return jsonify(int(first) + int(second))
 
 @app.route("/calculator/subtract", methods=['POST'])
 def subtract():
@@ -28,7 +28,7 @@ def subtract():
     first = numbers['first']
     second = numbers['second']
     # return jsonify(response)
-    return str(int(first) - int(second))
+    return jsonify(int(first) - int(second))
 
 if __name__ == '__main__':
     app.run(port=8080,host='0.0.0.0')
